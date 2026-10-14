@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - <%= cv.nimi %> <%= cv.perekonnanimi %></title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/804c84d834.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div class="header-info">
+                <h1>Curriculum Vitae</h1>
+                <h2>
+                    <span><%= cv.nimi %></span>
+                    <span><%= cv.perekonnanimi %></span>
+                </h2>
+            </div>
+
+            <div class="image-container">
+                <div class="cv-image">
+                    <img id="carousel-image"
+                        src="/images/CV-Pilt.png"
+                        alt="CV foto">
+                </div>
+            </div>
+        </header>
+
+        <section class="main">
+            <div class="personal-info">
+                <p>Sünniaeg: <%= cv.synniaeg %></p>
+                <p>Vanus: <%= cv.vanus %></p>
+                <p>Aadress: <%= cv.aadress %></p>
+                <p>Telefon: <%= cv.telefon %></p>
+                <p>
+                    E-post:
+                    <a href="mailto:<%= cv.email %>"><%= cv.email %></a>
+                </p>
+            </div>
+
+            <div class="education">
+                <h3>Hariduskäik:</h3>
+                <p>2010 - 2016&nbsp;&nbsp;&nbsp; Viimsi Lasteaed-Algkool</p>
+                <p>2016 - 2019&nbsp;&nbsp;&nbsp; Kolga Kool</p>
+                <p>2019 - 2022&nbsp;&nbsp;&nbsp; Loksa Gümnaasium</p>
+                <p>2024 -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tallinna Tehnikakõrgkool</p>
+            </div>
+
+            <div class="work-experience">
+                <h3>Töökogemus:</h3>
+                <p>2022 - 2023&nbsp;&nbsp;&nbsp; Viinistu Rannarestoran</p>
+                <p>2023 - 2024&nbsp;&nbsp;&nbsp; Hotel Olympia OÜ</p>
+                <p>2024 - 2025&nbsp;&nbsp;&nbsp; Tallinna Teletorn</p>
+            </div>
+
+            <div class="skills">
+                <h3>Arvuti kasutamise oskus:</h3>
+                <ul>
+                    <% cv.oskused.forEach(function(oskus) { %>
+                        <li><%= oskus %></li>
+                    <% }); %>
+                </ul>
+            </div>
+
+            <div class="review">
+                <div class="review-stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <button type="button">Leave your review</button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="social-media">
+                <ul class="social-media-list">
+                    <li>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-square-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="contact-links">
+                <ul class="contact-links-list">
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+
+            <div class="copyright">
+                <span>2026 ©</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="/js/carousel.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

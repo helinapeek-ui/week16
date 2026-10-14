@@ -1,0 +1,14 @@
+
+{
+  "name": "week16-cv",
+  "version": "1.0.0",
+  "description": "CV using JSON and EJS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
